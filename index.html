@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dynamic File Input Plugin</title>
+    <link rel="stylesheet" href="booststrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="booststrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="dynamic-file-input.css">
+  </head>
+  <body>
+
+    <form class="" action="index.html" method="post">
+      <div class="">
+        <table class="table table-striped" id="imgtable">
+          <tr>
+            <td>Pratik</td>
+            <td>MIST</td>
+          </tr>
+          <tr>
+            <td>Pratik</td>
+            <td>MIST</td>
+          </tr>
+        </table>
+      </div>
+      <div class="form-group">
+        <label class="btn btn-info" style="width:100px;cursor:pointer;margin-left:10px;margin-top:5px;">
+          <input id="imgs" name="imgs[]" style="display:none;" type="file" />
+          <i class="fa fa-plus"></i> Add File
+        </label>
+        <p class="error-message"></p>
+      </div>
+    </form>
+
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="booststrap/js/bootstrap.min.js"></script>
+    <script src="dynamic-file-input.js"></script>
+  </body>
+</html>
