@@ -3,7 +3,7 @@ var imgs = [];
 $(document).on('change', '#imgs', function(e) {
     if (this.files.length) {
       el++;
-      $("#imgtable").append('<tr class="trcl" id="tr'+(el-1)+'"><td><img class="preimgs"></td><td><button class="btn btn-danger" type="button" onclick="rmvimg('+(el-1)+')"><i class="fa fa-times"></i></button></td></tr>');
+      $("#imgtable").append('<tr class="trcl" id="tr'+(el-1)+'"><td><img class="preimgs"></td><td><button class="rmvbtn btn btn-danger" type="button" onclick="rmvimg('+(el-1)+')"><i class="fa fa-times"></i></button></td></tr>');
       var file = this.files[0];
       var reader = new FileReader();
 
@@ -26,8 +26,9 @@ function rmvimg(index) {
     imgs.splice(index, 1);
     console.log(imgs);
     var trcl = document.getElementsByClassName('trcl');
+    var rmvbtn = document.getElementsByClassName('rmvbtn');
     for(el=0; el<trcl.length; el++) {
         trcl[el].setAttribute('id', 'tr'+el);
-        trcl[el].setAttribute('onclick', 'rmvimg('+el+')');
+        rmvbtn[el].setAttribute('onclick', 'rmvimg('+el+')');
     }
 }
